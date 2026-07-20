@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMBLE COFFEE CO. — Landing Demo</title>
+    <meta name="description" content="Landing page template for a specialty coffee shop: menu with category filtering, locations, and an order-ahead flow. Portfolio demo built by Pablo Gonzalez.">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="site-top-sticky">
+        <div class="demo-ribbon">
+            <span class="demo-ribbon-badge"><i class="fa-solid fa-flask"></i> Portfolio Demo</span>
+            <span class="demo-ribbon-text">This is a fictional café built to showcase design &amp; code — no real orders are placed here.</span>
+            <a href="https://github.com/pagonzalezmald" target="_blank" class="demo-ribbon-credit">By Pablo Gonzalez →</a>
+        </div>
+
+        <header class="header">
+            <div class="container header-inner">
+                <a href="#home" class="logo">AMBLE</a>
+                <nav class="menu">
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-pill nav-cta order-btn">Order Ahead</button>
+                    <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="side-menu" id="side-menu">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#locations">Locations</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="hero-badge"><span class="dot"></span> Specialty Coffee &amp; Slow Mornings</div>
+                <h1>Good coffee,<br>no rush</h1>
+                <p class="hero-sub">Small-batch roasted beans, pastries baked each morning, and a room worth lingering in. Order ahead or come sit with us.</p>
+                <div class="hero-btns">
+                    <button class="btn order-btn">Order Ahead</button>
+                    <a href="#menu" class="btn btn-outline">View Menu</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>100%</strong><span>direct-trade beans</span></div>
+                    <div class="stat"><strong>2</strong><span>neighborhood locations</span></div>
+                    <div class="stat"><strong>6am</strong><span>doors open daily</span></div>
+                </div>
+            </div>
+            <svg class="hero-wave" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z"></path>
+            </svg>
+        </section>
+
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Menu</h2>
+                    <p>Rotating seasonal drinks, always a few classics on hand.</p>
+                </div>
+
+                <div class="menu-filters" id="menu-filters">
+                    <button class="filter-pill active" data-filter="All">All</button>
+                    <button class="filter-pill" data-filter="Coffee">Coffee</button>
+                    <button class="filter-pill" data-filter="Pastries">Pastries</button>
+                    <button class="filter-pill" data-filter="Seasonal">Seasonal</button>
+                </div>
+
+                <div class="menu-list" id="menu-list">
+                    <div class="menu-category" data-category="Coffee">
+                        <h3 class="menu-category-title">Coffee</h3>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Pour Over</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$5.50</span>
+                            </div>
+                            <p class="menu-row-desc">Single-origin, brewed to order.</p>
+                        </div>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Oat Milk Latte</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$6.00</span>
+                            </div>
+                            <p class="menu-row-desc">House espresso, steamed oat milk.</p>
+                        </div>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Cold Brew</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$5.00</span>
+                            </div>
+                            <p class="menu-row-desc">Steeped 18 hours, served over ice.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-category" data-category="Pastries">
+                        <h3 class="menu-category-title">Pastries</h3>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Almond Croissant</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$4.50</span>
+                            </div>
+                            <p class="menu-row-desc">Laminated fresh each morning.</p>
+                        </div>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Sourdough Toast</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$6.50</span>
+                            </div>
+                            <p class="menu-row-desc">Local levain, whipped ricotta, honey.</p>
+                        </div>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Banana Bread</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$4.00</span>
+                            </div>
+                            <p class="menu-row-desc">Walnut, brown butter glaze.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-category" data-category="Seasonal">
+                        <h3 class="menu-category-title">Seasonal</h3>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Matcha Latte</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$6.00</span>
+                            </div>
+                            <p class="menu-row-desc">Ceremonial grade, lightly sweetened.</p>
+                        </div>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Chai Oat Latte</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$5.50</span>
+                            </div>
+                            <p class="menu-row-desc">House-steeped spice blend.</p>
+                        </div>
+                        <div class="menu-row">
+                            <div class="menu-row-head">
+                                <span class="menu-row-name">Maple Cortado</span>
+                                <span class="menu-row-leader"></span>
+                                <span class="menu-row-price">$6.50</span>
+                            </div>
+                            <p class="menu-row-desc">Espresso, steamed milk, local maple.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="locations" id="locations">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Locations</h2>
+                    <p>Two rooms, both open early.</p>
+                </div>
+                <div class="locations-grid">
+                    <div class="card location-card">
+                        <img src="media/location-downtown.jpg" alt="Interior of the Downtown location" class="location-photo">
+                        <div class="location-card-body">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Downtown</h3>
+                            <p>214 Elm Street<br>Open daily · 6am – 4pm</p>
+                        </div>
+                    </div>
+                    <div class="card location-card">
+                        <img src="media/location-riverside.jpg" alt="Interior of the Riverside location" class="location-photo">
+                        <div class="location-card-body">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Riverside</h3>
+                            <p>88 Millbank Avenue<br>Open daily · 7am – 5pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container about-inner">
+                <img src="media/about.jpg" alt="A table at AMBLE with coffee and pastries" class="about-photo">
+                <div class="about-text">
+                    <div class="section-title left">
+                        <h2>Our Approach</h2>
+                    </div>
+                    <p>AMBLE roasts in small batches and buys direct from the farms we source from — no distributor markup, no mystery about where the beans came from. The room is built the same way: slow, unhurried, made for staying a while.</p>
+                    <ul class="why-list">
+                        <li><i class="fa-solid fa-check"></i> Direct-trade beans, roasted weekly</li>
+                        <li><i class="fa-solid fa-check"></i> Pastries baked fresh each morning</li>
+                        <li><i class="fa-solid fa-check"></i> Oat, almond, and whole milk always on hand</li>
+                        <li><i class="fa-solid fa-check"></i> Free wifi, no time limit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <p class="gallery-label"><i class="fa-solid fa-circle-info"></i> Stock photography, used for demo purposes only — not AMBLE's actual space.</p>
+                <div class="gallery-grid">
+                    <img src="media/gallery-1.jpg" alt="Espresso pouring into a cup on a scale">
+                    <img src="media/gallery-2.jpg" alt="Latte art in a white cup">
+                    <img src="media/gallery-3.jpg" alt="Three specialty drinks on a tray">
+                    <img src="media/gallery-4.jpg" alt="Barista preparing a portafilter">
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonios" id="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>From Regulars</h2>
+                    <p class="disclaimer"><i class="fa-solid fa-circle-info"></i> Example reviews created for this demo — not real customers.</p>
+                </div>
+                <div class="testimonios-grid">
+                    <div class="card testimonio-card">
+                        <span class="demo-pill">DEMO</span>
+                        <p>"Ordered ahead on my way in and it was ready before I got to the counter. Coffee's excellent too."</p>
+                        <div class="testimonio-author">Naomi P. — Regular</div>
+                    </div>
+                    <div class="card testimonio-card">
+                        <span class="demo-pill">DEMO</span>
+                        <p>"The only café where I don't feel rushed to give up my table. Genuinely built for lingering."</p>
+                        <div class="testimonio-author">Theo M. — Regular</div>
+                    </div>
+                    <div class="card testimonio-card">
+                        <span class="demo-pill">DEMO</span>
+                        <p>"Sourdough toast alone is worth the walk over from Riverside."</p>
+                        <div class="testimonio-author">Alex F. — Regular</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band" id="cta">
+            <div class="container cta-inner">
+                <h2>Skip the line next time</h2>
+                <p>Order ahead and pick up whenever you're ready.</p>
+                <button class="btn btn-light order-btn">Order Ahead</button>
+            </div>
+        </section>
+
+        <section class="contacto" id="contact">
+            <div class="container contacto-inner">
+                <div class="section-title left">
+                    <h2>Contact</h2>
+                    <p>Catering, events, or just want to say hi.</p>
+                </div>
+                <a class="contact-email" href="mailto:hello@amble-demo.example">hello@amble-demo.example</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">AMBLE</div>
+            <nav class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#locations">Locations</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="footer-credit">
+                Landing page demo by
+                <a href="https://github.com/pagonzalezmald" target="_blank">Pablo Gonzalez</a>
+                · <a href="https://github.com/pagonzalezmald/landing-cafe-demo" target="_blank">View code on GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Order modal -->
+    <div class="order-overlay" id="order-overlay">
+        <div class="order-modal">
+            <button class="order-close" id="order-close" aria-label="Close">✕</button>
+            <i class="fa-solid fa-circle-info order-icon"></i>
+            <h3>This is a demo order flow</h3>
+            <p>No order is actually placed. On a real build, this would connect to a point-of-sale system and take a real payment.</p>
+            <button class="btn" id="order-continue">Continue Browsing</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
