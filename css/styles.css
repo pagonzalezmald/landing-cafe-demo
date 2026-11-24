@@ -9,9 +9,9 @@
     --color-text-muted: #a89684;
     --color-bg: #faf3ea;
     --color-surface: #fffaf3;
-    --color-border: rgba(59,42,32,0.1);
-    --color-shadow-sm: 0 8px 24px rgba(59,42,32,0.08);
-    --color-shadow-md: 0 18px 44px rgba(59,42,32,0.14);
+    --color-border: rgba(59, 42, 32, 0.1);
+    --color-shadow-sm: 0 8px 24px rgba(59, 42, 32, 0.08);
+    --color-shadow-md: 0 18px 44px rgba(59, 42, 32, 0.14);
     --radius-card: 10px;
     --radius-pill: 999px;
 
@@ -24,7 +24,11 @@
     font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3, .logo, .footer-brand {
+h1,
+h2,
+h3,
+.logo,
+.footer-brand {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
 }
